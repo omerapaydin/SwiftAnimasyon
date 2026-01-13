@@ -19,7 +19,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func basla(_ sender: Any) {
-        alphaAnimasyonu()
+        //alphaAnimasyonu()
+        scaleAnimasyonu()
     }
     
     func alphaAnimasyonu(){
@@ -28,7 +29,13 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 5) {
             self.resim.alpha = 1
         }
-        
+    }
+    
+    
+    func scaleAnimasyonu(){
+        UIView.animate(withDuration: 3) {
+            self.resim.transform = CGAffineTransform(scaleX: 2, y: 2)
+        }
     }
     
     
