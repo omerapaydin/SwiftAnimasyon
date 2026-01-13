@@ -20,7 +20,8 @@ class ViewController: UIViewController {
 
     @IBAction func basla(_ sender: Any) {
         //alphaAnimasyonu()
-        scaleAnimasyonu()
+        //scaleAnimasyonu()
+        rotationAnimasyonu()
     }
     
     func alphaAnimasyonu(){
@@ -35,6 +36,13 @@ class ViewController: UIViewController {
     func scaleAnimasyonu(){
         UIView.animate(withDuration: 3) {
             self.resim.transform = CGAffineTransform(scaleX: 2, y: 2)
+        }
+    }
+    
+    
+    func rotationAnimasyonu(){
+        UIView.animate(withDuration: 1) {
+            self.yazi.transform = CGAffineTransform(rotationAngle: 45 * .pi/360)
         }
     }
     
